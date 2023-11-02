@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<span th:replace="~{home :: naveBar}"></span>
+<h1>Form</h1>
+
+<form th:action="@{/submitForm}" th:object="${studentSubmit}" method="post">
+    <input th:field="*{nom}" typ@{/submitForm}e="text" placeholder="Votre Nom">
+    <input th:field="*{prenom}" type="text" placeholder="Votre Prenom">
+    <input th:field="*{age}" type="text" placeholder="Votre Age">
+    <button type="submit">Valider</button>
+</form>
+
+<span th:replace="~{home :: bottom}"></span>
+</body>
+</html>

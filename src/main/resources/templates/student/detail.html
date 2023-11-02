@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<span th:replace="~{home :: naveBar}"></span>
+<h1>Detail</h1>
+
+<div>
+    <span th:text="${currentStudent.getId()}"></span>
+    <span th:text="${currentStudent.getNom()}"></span>
+    <span th:text="${currentStudent.getPrenom()}"></span>
+    <span th:text="${currentStudent.getAge()}"></span>
+
+    <a  th:href="@{/modifier/__${currentStudent.getId()}__}">Modifier</a>
+    <a  th:href="@{/delete/__${currentStudent.getId()}__}">Supprimer</a>
+</div>
+
+<span th:replace="~{home :: bottom}"></span>
+
+</body>
+</html>
